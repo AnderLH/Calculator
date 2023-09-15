@@ -8,12 +8,13 @@ import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
 
-    private var operation:String = ""
+    private var result:String? = "0"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        var operation:String = ""
         val text: TextView = findViewById<TextView>(R.id.textViewNumbers)
 
         val buttonN1: Button = findViewById<Button>(R.id.buttonNum1)
@@ -33,52 +34,62 @@ class MainActivity : AppCompatActivity() {
 
         buttonN1.setOnClickListener {
             operation += "1"
-            text.text = operation.toString()
+            result=operation
+            text.text = result.toString()
         }
 
         buttonN2.setOnClickListener {
             operation += "2"
-            text.text = operation.toString()
+            result=operation
+            text.text = result.toString()
         }
 
         buttonN3.setOnClickListener {
             operation += "3"
-            text.text = operation.toString()
+            result=operation
+            text.text = result.toString()
         }
 
         buttonN4.setOnClickListener {
             operation += "4"
-            text.text = operation.toString()
+            result=operation
+            text.text = result.toString()
         }
 
         buttonN5.setOnClickListener {
             operation += "5"
-            text.text = operation.toString()
+            result=operation
+            text.text = result.toString()
         }
 
         buttonN6.setOnClickListener {
             operation += "6"
-            text.text = operation.toString()
+            result=operation
+            text.text = result.toString()
         }
 
         buttonN7.setOnClickListener {
             operation += "7"
-            text.text = operation.toString()
+            result=operation
+            text.text = result.toString()
         }
 
         buttonN8.setOnClickListener {
             operation += "8"
-            text.text = operation.toString()
+            result=operation
+            text.text = result.toString()
         }
 
         buttonN9.setOnClickListener {
             operation += "9"
-            text.text = operation.toString()
+            result=operation
+            text.text = result.toString()
         }
 
         buttonN0.setOnClickListener {
             operation += "0"
-            text.text = operation.toString()
+            result=operation
+            text.text = result.toString()
         }
 
         buttonPls.setOnClickListener {
@@ -88,18 +99,17 @@ class MainActivity : AppCompatActivity() {
             }
         }
         buttonMin.setOnClickListener {
-            if (operation.isNotEmpty()) {
-                operation = "$operation-"
-                text.text = operation.toString()
-            }
+            operation = "$operation-"
+            text.text = operation.toString()
         }
         buttonEq.setOnClickListener {
             if (operation.isNotEmpty()) {
-                val response: String? = doOperation(operation)
-                if (response.equals(null)){
-                    text.text = "Error"
+                result = doOperation(operation)
+                if (result.equals(null)){
+                    result = "Error"
+                    text.text = result
                 }else{
-                    text.text = response.toString()
+                    text.text = result.toString()
                 }
                 operation = ""
             }
@@ -111,13 +121,13 @@ class MainActivity : AppCompatActivity() {
         super.onResume()
         Log.d("Debug","onResume")
         val text: TextView = findViewById(R.id.textViewNumbers)
-        text.text = operation.toString()
+        text.text = result.toString()
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
         // Save the user's current game state.
         outState?.run {
-            putString("contador", operation)
+            putString("contador", result)
         }
         // Always call the superclass so it can save the view hierarchy.
         super.onSaveInstanceState(outState)
@@ -127,7 +137,7 @@ class MainActivity : AppCompatActivity() {
         super.onRestoreInstanceState(savedInstanceState)
         // Restore state members from saved instance.
         savedInstanceState?.run {
-            operation = savedInstanceState.getString("contador").toString()
+            result = savedInstanceState.getString("contador").toString()
         }
     }
 

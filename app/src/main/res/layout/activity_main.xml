@@ -10,7 +10,6 @@
         android:id="@+id/textViewNumbers"
         android:layout_width="361dp"
         android:layout_height="60dp"
-        android:text="0"
         android:textAlignment="textEnd"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -21,11 +20,11 @@
 
     <Button
         android:id="@+id/buttonEqual"
-        style="@style/Widget.AppCompat.Button"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:backgroundTintMode="multiply"
-        android:text="="
+        android:backgroundTint="@color/design_default_color_error"
+        android:text="@string/buttonEqual"
+        app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button20"
@@ -33,10 +32,11 @@
 
     <Button
         android:id="@+id/button20"
-        style="@style/Widget.AppCompat.Button"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:text=","
+        android:backgroundTint="@color/material_dynamic_neutral30"
+        android:text="@string/buttonComa"
+        app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/buttonEqual"
         app:layout_constraintStart_toEndOf="@+id/buttonNum0"
@@ -44,34 +44,35 @@
 
     <Button
         android:id="@+id/buttonMinus"
-        style="@style/Widget.AppCompat.Button"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:backgroundTintMode="multiply"
-        android:text="-"
+        android:backgroundTint="@color/design_default_color_error"
+        android:text="@string/buttonMinus"
+        app:cornerRadius="10dp"
         app:layout_constraintBottom_toTopOf="@+id/buttonPlus"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/buttonNum6"
-        app:layout_constraintTop_toBottomOf="@+id/button5" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonMult" />
 
     <Button
-        android:id="@+id/button5"
-        style="@style/Widget.AppCompat.Button"
+        android:id="@+id/buttonMult"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:backgroundTintMode="multiply"
-        android:text="X"
+        android:backgroundTint="@color/design_default_color_error"
+        android:text="@string/buttonMulti"
+        app:cornerRadius="10dp"
         app:layout_constraintBottom_toTopOf="@+id/buttonMinus"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/buttonNum9"
-        app:layout_constraintTop_toBottomOf="@+id/button4" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonDiv" />
 
     <Button
         android:id="@+id/buttonNum0"
-        style="@style/Widget.AppCompat.Button"
         android:layout_width="140dp"
         android:layout_height="70dp"
-        android:text="0"
+        android:backgroundTint="@color/material_dynamic_neutral30"
+        android:text="@string/num_0"
+        app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button20"
         app:layout_constraintStart_toStartOf="parent"
@@ -79,10 +80,11 @@
 
     <Button
         android:id="@+id/buttonNum1"
-        style="@style/Widget.AppCompat.Button"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:text="1"
+        android:backgroundTint="@color/material_dynamic_neutral30"
+        android:text="@string/num_1"
+        app:cornerRadius="10dp"
         app:layout_constraintBottom_toTopOf="@+id/buttonNum0"
         app:layout_constraintEnd_toStartOf="@+id/buttonNum2"
         app:layout_constraintStart_toStartOf="parent"
@@ -91,10 +93,11 @@
 
     <Button
         android:id="@+id/buttonNum2"
-        style="@style/Widget.AppCompat.Button"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:text="2"
+        android:backgroundTint="@color/material_dynamic_neutral30"
+        android:text="@string/num_2"
+        app:cornerRadius="10dp"
         app:layout_constraintBottom_toTopOf="@+id/buttonNum0"
         app:layout_constraintEnd_toStartOf="@+id/buttonNum3"
         app:layout_constraintStart_toEndOf="@+id/buttonNum1"
@@ -102,10 +105,11 @@
 
     <Button
         android:id="@+id/buttonNum3"
-        style="@style/Widget.AppCompat.Button"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:text="3"
+        android:backgroundTint="@color/material_dynamic_neutral30"
+        android:text="@string/num_3"
+        app:cornerRadius="10dp"
         app:layout_constraintBottom_toTopOf="@+id/button20"
         app:layout_constraintEnd_toStartOf="@+id/buttonPlus"
         app:layout_constraintStart_toEndOf="@+id/buttonNum2"
@@ -113,10 +117,11 @@
 
     <Button
         android:id="@+id/buttonNum4"
-        style="@style/Widget.AppCompat.Button"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:text="4"
+        android:backgroundTint="@color/material_dynamic_neutral30"
+        android:text="@string/num_4"
+        app:cornerRadius="10dp"
         app:layout_constraintBottom_toTopOf="@+id/buttonNum1"
         app:layout_constraintEnd_toStartOf="@+id/buttonNum5"
         app:layout_constraintStart_toStartOf="parent"
@@ -124,10 +129,11 @@
 
     <Button
         android:id="@+id/buttonNum5"
-        style="@style/Widget.AppCompat.Button"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:text="5"
+        android:backgroundTint="@color/material_dynamic_neutral30"
+        android:text="@string/num_5"
+        app:cornerRadius="10dp"
         app:layout_constraintBottom_toTopOf="@+id/buttonNum2"
         app:layout_constraintEnd_toStartOf="@+id/buttonNum6"
         app:layout_constraintStart_toEndOf="@+id/buttonNum4"
@@ -135,10 +141,11 @@
 
     <Button
         android:id="@+id/buttonNum6"
-        style="@style/Widget.AppCompat.Button"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:text="6"
+        android:backgroundTint="@color/material_dynamic_neutral30"
+        android:text="@string/num_6"
+        app:cornerRadius="10dp"
         app:layout_constraintBottom_toTopOf="@+id/buttonNum3"
         app:layout_constraintEnd_toStartOf="@+id/buttonMinus"
         app:layout_constraintStart_toEndOf="@+id/buttonNum5"
@@ -146,70 +153,75 @@
 
     <Button
         android:id="@+id/buttonNum7"
-        style="@style/Widget.AppCompat.Button"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:text="7"
+        android:backgroundTint="@color/material_dynamic_neutral30"
+        android:text="@string/num_7"
+        app:cornerRadius="10dp"
         app:layout_constraintBottom_toTopOf="@+id/buttonNum4"
         app:layout_constraintEnd_toStartOf="@+id/buttonNum8"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonAc" />
 
     <Button
         android:id="@+id/buttonNum8"
-        style="@style/Widget.AppCompat.Button"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:text="8"
+        android:backgroundTint="@color/material_dynamic_neutral30"
+        android:text="@string/num_8"
+        app:cornerRadius="10dp"
         app:layout_constraintBottom_toTopOf="@+id/buttonNum5"
         app:layout_constraintEnd_toStartOf="@+id/buttonNum9"
         app:layout_constraintStart_toEndOf="@+id/buttonNum7"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonAc" />
 
     <Button
         android:id="@+id/buttonNum9"
-        style="@style/Widget.AppCompat.Button"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:text="9"
+        android:backgroundTint="@color/material_dynamic_neutral30"
+        android:text="@string/num_9"
+        app:cornerRadius="10dp"
         app:layout_constraintBottom_toTopOf="@+id/buttonNum6"
-        app:layout_constraintEnd_toStartOf="@+id/button5"
+        app:layout_constraintEnd_toStartOf="@+id/buttonMult"
         app:layout_constraintStart_toEndOf="@+id/buttonNum8"
-        app:layout_constraintTop_toBottomOf="@+id/button4" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonDiv" />
 
     <Button
         android:id="@+id/buttonPlus"
-        style="@style/Widget.AppCompat.Button"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:backgroundTintMode="multiply"
-        android:text="+"
+
+        android:backgroundTint="@color/design_default_color_error"
+        android:text="@string/buttonPlus"
+        app:cornerRadius="10dp"
         app:layout_constraintBottom_toTopOf="@+id/buttonEqual"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/buttonNum3"
         app:layout_constraintTop_toBottomOf="@+id/buttonMinus" />
 
     <Button
-        android:id="@+id/button2"
-        style="@style/Widget.AppCompat.Button"
+        android:id="@+id/buttonAc"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:text="AC"
+        android:backgroundTint="@color/design_default_color_error"
+        android:text="@string/buttonAC"
+        app:cornerRadius="10dp"
         app:layout_constraintBottom_toTopOf="@+id/buttonNum7"
-        app:layout_constraintEnd_toStartOf="@+id/button4"
+        app:layout_constraintEnd_toStartOf="@+id/buttonDiv"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewNumbers" />
 
     <Button
-        android:id="@+id/button4"
-        style="@style/Widget.AppCompat.Button"
+        android:id="@+id/buttonDiv"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:backgroundTintMode="multiply"
-        android:text="/"
-        app:layout_constraintBottom_toTopOf="@+id/button5"
+        android:backgroundTint="@color/design_default_color_error"
+        android:text="@string/buttonDiv"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonMult"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintStart_toEndOf="@+id/buttonAc"
         app:layout_constraintTop_toBottomOf="@+id/textViewNumbers" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
