@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.TextView
+import com.example.calculatorapp.Operations.doOperation
 
 class MainActivity : AppCompatActivity() {
 
@@ -31,6 +32,15 @@ class MainActivity : AppCompatActivity() {
         val buttonPls: Button = findViewById<Button>(R.id.buttonPlus)
         val buttonMin: Button = findViewById<Button>(R.id.buttonMinus)
         val buttonEq: Button = findViewById<Button>(R.id.buttonEqual)
+
+        //clase anonima
+        /*Button button = (Button) findViewById(R.id.buttonNum0)
+        button.setOnClickListener(new View.OnClickListener()){
+            @override
+            public void onClick(View v) {
+
+            }
+        }*/
 
         buttonN1.setOnClickListener {
             operation += "1"

@@ -1,4 +1,4 @@
-package com.example.calculatorapp
+package com.example.calculatorapp.Operations
 @Throws(Exception::class)
 fun doOperation(operation: String): String? {
     var ret: String? = null
