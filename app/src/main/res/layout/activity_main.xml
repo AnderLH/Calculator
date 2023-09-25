@@ -27,7 +27,8 @@
         app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button20"
+        app:layout_constraintHorizontal_bias="0.923"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonPlus" />
 
     <Button
@@ -74,7 +75,8 @@
         android:text="@string/num_0"
         app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.092"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonNum1" />
 
@@ -208,7 +210,8 @@
         android:text="@string/buttonAC"
         app:cornerRadius="10dp"
         app:layout_constraintBottom_toTopOf="@+id/buttonNum7"
-        app:layout_constraintEnd_toStartOf="@+id/buttonDiv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.395"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewNumbers" />
 
@@ -221,7 +224,8 @@
         app:cornerRadius="10dp"
         app:layout_constraintBottom_toTopOf="@+id/buttonMult"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/buttonAc"
+        app:layout_constraintHorizontal_bias="0.774"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewNumbers" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
